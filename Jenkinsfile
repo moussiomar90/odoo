@@ -10,7 +10,7 @@ node {
     }
     else {
        stage('GIT clone ') {
-        sh 'ssh -p 22 omar@192.168.1.6 "rm -rf /home/omar/addons/ ;cd /home/omar/addons/ ;" '
+        sh 'ssh -p 22 omar@192.168.1.6 "rm -rf /home/omar/addons/* ;cd /home/omar/addons/ ;" '
       
                     }
        
