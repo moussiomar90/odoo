@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage("DEV ...") {
             steps {
-               sh 'echo DEV'
+               sh 'echo DEV' +env.BRANCH_NAME
             }
         }
         stage("Satging ...") {
