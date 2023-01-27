@@ -10,17 +10,17 @@ node {
     }
     else {
        stage('GIT clone ') {
-        sh 'ssh -p 22 omar@192.168.1.6 "rm -rf odoo ;rm -rf /home/omar/addons/*; git clone --branch dev  https://github.com/moussiomar90/odoo ; " '
+        sh 'ssh -p 22 omar@192.168.1.6 "rm -rf odoo ; git clone --branch dev  https://github.com/moussiomar90/odoo ; " '
                     }
        
         stage('Repo Init  ') {
            
-        sh 'ssh -p 22 omar@192.168.1.6 "docker stop omar_web_1;docker rm  omar_web_1 -f; docker stop omar_db_1; docker rm omar_db_1 -f;  docker ps "'
+        sh 'ssh -p 22 omar@192.168.1.6 "rm -rf /home/omar/addons/*; docker stop omar_web_1;docker rm  omar_web_1 -f; docker stop omar_db_1; docker rm omar_db_1 -f;  docker ps "'
                        
         }
         stage('Docker Compose ') {
            
-        sh 'ssh -p 22 omar@192.168.1.6 "cd odoo ; docker-compose up -d ;  cp openacademy /home/omar/addons" '
+        sh 'ssh -p 22 omar@192.168.1.6 "cd odoo ; docker-compose up -d ;  cp -r /home/omar/openacademy /home/omar/addons" '
                     
         
         }
