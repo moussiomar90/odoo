@@ -19,7 +19,7 @@ node {
                     
         
         }
-        stage('Repo Init  ') {
+        stage('Docker Compose ') {
            
         sh 'ssh -p 22 omar@192.168.1.6 "cd odoo ; docker-compose up -d ;" '
                     
