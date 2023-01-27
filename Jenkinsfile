@@ -3,7 +3,7 @@ node {
         if (env.BRANCH_NAME == 'prod')
    {
            stage('ENv preparing...') {
-                 sh 'ssh -p 22 sama@192.168.1.6 "docker ps" '
+                 sh 'ssh -p 22 sama@192.168.1.4 "docker ps" '
                 }
        
            
