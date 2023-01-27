@@ -5,7 +5,7 @@ pipeline {
         if (env.BRANCH_NAME == "DEV")
         stage("DEV ....") {
             steps {
-               sh 'from if  ' +env.BRANCH_NAME
+               sh 'echo from ' +env.BRANCH_NAME
             }
         }
     }
