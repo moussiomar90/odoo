@@ -13,7 +13,7 @@ node {
          stage ('Test ok '){
                  echo ' Please check you website on this adress : 192.168.1.4:8069 '
               }
-    }
+   
        
            
    }
