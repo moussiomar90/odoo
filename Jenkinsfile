@@ -3,7 +3,7 @@ pipeline {
      
     stages {
         if (env.BRANCH_NAME == "DEV")
-        stage("DEV ...") {
+        stage("DEV ....") {
             steps {
                sh 'from if  ' +env.BRANCH_NAME
             }
