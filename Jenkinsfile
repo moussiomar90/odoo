@@ -1,9 +1,14 @@
 node {
-    stage('Step1') {
-        if (env.BRANCH_NAME == 'DEV') {
-            echo 'Hello from main DEV'
-        } else {
-            sh "echo 'Hello from ${env.BRANCH_NAME} branch!'"
+   
+        if (env.BRANCH_NAME == 'prod') {
+            echo 'Hello from  PROD'
         }
+    else if (env.BRANCH_NAME == 'staging'){
+        
+           echo 'Hello from main staging'
     }
+    else {
+        echo 'Hello from main dev'
+    }
+    
 }
