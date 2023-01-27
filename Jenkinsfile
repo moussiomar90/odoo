@@ -15,7 +15,7 @@ node {
        
         stage('Repo Init  ') {
            
-        sh 'ssh -p 22 omar@192.168.1.6 "docker stop omar_web_1;docker rm  omar_web_1; docker stop odoo_db_1; docker rm odoo_db_1;  docker ps "'
+        sh 'ssh -p 22 omar@192.168.1.6 "docker stop omar_web_1;docker rm  omar_web_1 -f; docker stop omar_db_1; docker rm omar_db_1 -f;  docker ps "'
                        
         }
         stage('Docker Compose ') {
