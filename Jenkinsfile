@@ -2,11 +2,13 @@ pipeline {
     agent any
      
     stages {
+        if (env.BRANCH_NAME == "DEV")
         stage("DEV ...") {
             steps {
-               sh 'echo ' +env.BRANCH_NAME
+               sh 'from if  ' +env.BRANCH_NAME
             }
         }
+    }
         stage("Satging ...") {
             steps {
                 sh 'echo staging'
