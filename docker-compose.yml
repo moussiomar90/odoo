@@ -19,9 +19,9 @@ services:
     ports:
       - "8069:8069/tcp"
     volumes:
-      - web-data:/var/lib/odoo
-      - ./config:/etc/odoo
-      - ./addons:/mnt/extra-addons
+      - /home/omar/addos:/var/lib/odoo
+      - /home/omar/config:/etc/odoo
+      
 volumes:
   db-data:
     driver: local
