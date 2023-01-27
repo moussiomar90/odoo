@@ -3,16 +3,10 @@ node {
         if (env.BRANCH_NAME == 'prod')
    {
            stage('ENv preparing...') {
-                 sh 'ssh -p 22 sama@192.168.1.6 "rm -rf /home/omar/addons/*" '
+                 sh 'ssh -p 22 sama@192.168.1.6 "docker ps" '
                 }
        
-           stage ('Addons Install..'){
-                 sh 'ssh -p 22 omar@192.168.1.6 "cd /home/sama/addons/ ; git clone --branch dev  https://github.com/moussiomar90/odoo.git  ./openacademy;" '
-              }
            
-           stage ('Test ok '){
-                 echo ' Please check you website on this adress : 192.168.1.4:8080 '
-              }
     }
  }
 
