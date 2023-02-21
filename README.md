@@ -1,4 +1,4 @@
-# Open Academy
+# Open Academy- from prod branch
 
 This an odoo app, going through the odoo `building module tutorial`, [https://www.odoo.com/documentation/11.0/howtos/backend.html](https://www.odoo.com/documentation/11.0/howtos/backend.html).
 The app is ment to be a tool to practice odoo concepts.
